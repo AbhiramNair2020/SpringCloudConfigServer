@@ -9,9 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>SpringCloudConfigServer</artifactId>
+    <artifactId>springcloudconfigserver</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>SpringCloudConfigServer</name>
+    <packaging>jar</packaging>
     <description>SpringCloudConfigServer</description>
     <properties>
         <java.version>11</java.version>
@@ -66,6 +67,9 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <image>
+                        <name>abhiramnair/${project.artifactId}</name>
+                    </image>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
